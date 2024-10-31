@@ -1,0 +1,83 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+@import '/node_modules/cropperjs/dist/cropper.css';
+@import '/vendor/awcodes/filament-curator/resources/css/plugin.css';
+@import '/vendor/awcodes/filament-table-repeater/resources/css/plugin.css';
+
+@config 'tailwind.config.js';
+
+.fi-body:has(.fi-simple-layout) {
+    @apply bg-white dark:bg-gray-900;
+}
+
+.fi-simple-layout {
+    .fi-simple-main {
+        @apply max-w-md bg-transparent ring-0 dark:bg-transparent;
+
+        .fi-input-wrp {
+            .fi-input {
+                @apply text-lg;
+                box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.5);
+            }
+        }
+
+        .fi-ac {
+            @apply flex justify-center;
+        }
+    }
+}
+
+.fi-user-menu {
+    @apply flex-shrink-0;
+
+    .fi-dropdown-trigger button {
+        @apply overflow-hidden rounded-full bg-gray-100 dark:bg-gray-800;
+    }
+}
+
+.fi-sidebar {
+    .fi-sidebar-header {
+        position: relative;
+    }
+
+    .fi-sidebar-item-icon {
+        @apply h-5 w-5;
+    }
+
+    .fi-badge {
+        font-size: 0.625rem;
+    }
+}
+
+.fi-wi-widget .fi-section {
+    @apply bg-white bg-gradient-to-tr from-gray-100 via-white to-white dark:bg-gray-900 dark:from-gray-950 dark:to-gray-900;
+}
+
+.fi-fo-field-wrp-label span {
+    @apply text-xs;
+}
+
+.fi-fo-radio label span {
+    @apply text-sm;
+}
+
+.fi-section {
+    header {
+        @apply px-4 py-2.5;
+
+        .fi-section-header-heading {
+            @apply text-sm;
+        }
+    }
+
+    .fi-section-content {
+        @apply p-4;
+    }
+}
+
+.fi-resource-list-records-page.fi-resource-locations .fi-tabs {
+    @apply ml-0 mr-auto;
+}
+
+.fi-adjacency-list-leaf:first-of-type {
+    margin-top: 0.25rem !important;
+}
